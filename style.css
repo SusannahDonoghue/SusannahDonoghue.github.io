@@ -109,3 +109,29 @@ main {
 h2, h3 {
     margin: 0px;
 }
+
+/* portfolio styles */
+.content h1 {
+    color:  #DC143C;
+}
+
+#portfolio {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#portfolio li {
+    background: grey;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+    background: blue;
+}
+
+#portfolio a {
+    text-decoration: none;
+    color: purple;
+}
