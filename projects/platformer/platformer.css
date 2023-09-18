@@ -3,7 +3,8 @@ body {
 }
 
 canvas {
-  background-color: lightgray;
+  background-image:url("/projects/platformer/images/Forest.jpg");
+  background-size:cover;
 }
 
 img {
