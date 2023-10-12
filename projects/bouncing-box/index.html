@@ -11,7 +11,6 @@
 			background-color: teal;
 			font-size: 300%;
 			text-align: center;
-
 			user-select: none;
 			display: block;
 			position: absolute;
@@ -21,6 +20,7 @@
 		}
 		.board {
 			height: 100vh;
+			background-image: url("/projects/bouncing-box/reading/sVjjkAACubAhRy4vWJhRWC.jpg")
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -45,7 +45,7 @@
 			var boardHeight = jQuery(window).height();
 
 			// Every 50 milliseconds, call the update Function (see below)
-			setInterval(update, 100);
+			 var interval = setInterval(update, 100);
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
@@ -71,6 +71,8 @@
 			var points = 0;
 			var speed = 10;
 			var speedY = 10;
+			var randomNumX = Math.random(0, boardWidth)
+			var randomNumY = Math.random(0, boardHeight)
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
@@ -87,6 +89,12 @@
 				} else if (positionX < 0) {
 					speed *= -1;
 				}
+
+				if (positionY > boardHeight) {
+					speedY *= -1;
+				} else if (positionY < 0) {
+					speedY *= -1;
+				}
 			};
 
 			/* 
@@ -95,8 +103,8 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionX = 0;
-				positionY = 0;
+				positionX = randomNumX;
+				positionY = randomNumY;
 				points += 1;
 				changeBoxText(points)
 				if (speed > 0) {
