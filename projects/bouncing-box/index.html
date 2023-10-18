@@ -45,7 +45,7 @@
 			var boardHeight = jQuery(window).height();
 
 			// Every 50 milliseconds, call the update Function (see below)
-			 var interval = setInterval(update, 100);
+			setInterval(update, 100);
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
@@ -71,8 +71,6 @@
 			var points = 0;
 			var speed = 10;
 			var speedY = 10;
-			var randomNumX = Math.random(0, boardWidth)
-			var randomNumY = Math.random(0, boardHeight)
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
