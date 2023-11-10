@@ -24,10 +24,10 @@ var init = function (window) {
         var circles = [];
 
         //Challenge
-        var rightEdge = circle.x + circle.radius;
-        var leftEdge = circle.x - circle.radius;
-        var bottomEdge = circle.y - circle.radius;
-        var topEdge = circle.y + radius;
+        //var rightEdge = circle.x + circle.radius;
+        //var leftEdge = circle.x - circle.radius;
+        //var bottomEdge = circle.y - circle.radius;
+        //var topEdge = circle.y + radius;
         // TODO 2 : Create a function that draws a circle 
         function drawCircle() {
             circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
@@ -71,7 +71,7 @@ var init = function (window) {
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
+            if ( circle.x  > canvas.width ) {
                 circle.x = 0;
             } else if (circle.x < 0) { //LEFT
                 circle.x = canvas.width;
