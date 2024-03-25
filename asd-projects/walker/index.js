@@ -117,6 +117,7 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
+  
   function repositionGameItem() {
     walker.positionX += walker.speedX; // update the position of the box along the x-axis
     walker.positionY += walker.speedY; // update the position of the box along the y-axis
@@ -148,20 +149,11 @@ function runProgram(){
   function wallCollision0(){
     if (walker0.positionX < 0 || walker0.positionX + $("#walker0").width()> $("#board").width()) {
       walker0.positionX -= walker0.speedX;
-    } else if (walker.positionY < 0 || walker0.positionY + $("#walker0").height() > $("#board").height()) {
+    } else if (walker0.positionY < 0 || walker0.positionY + $("#walker0").height() > $("#board").height()) {
       walker0.positionY -= walker0.speedY;
     }
   }
 
-  function ballCollide(){
-    if (walker.positionX < walker0.positionX + $("#walker0").width() && walker.positionX + $("#walker0").width() > walker0.positionX &&  walker.positionY < walker0.positionY + $("#walker0").height() && walker.positionY + $("#walker").height()> walker0.positionY) {
-      return true;
-    }
-  }
-
-  function showResult(result) {
-    $("h2").text('doCollide: ' + result);
-}
   
   function endGame() {
     // stop the interval timer
