@@ -14,15 +14,17 @@ The CSS ids you will work with are:
 ///////////////////////////////////////////////////////////////////////
 
 // TODO 2: Implement bubbleSort
-function bubbleSort(array) [ 
-    While (array[0] > array[array.length - 1]) {
-        sorted = true;
-
-        for (var i = 0; i < array.length - 2; i++) {
-
+async function bubbleSort(array) { 
+    for (var i = 0; i < array.length; i++) {
+        for (var j = 0; j >= array.length - 1 && j <= array.length + 1; j++) {
+            if (array[j].value < array[j - 1].value) {
+                swap(array, array[j], array[j-1]);
+            }
+        updateCounter(bubbleCounter);
+        await sleep();
         }
     }
-]
+}
 
 // TODO 3: Implement quickSort
 
@@ -35,6 +37,8 @@ function swap(array, i, j) {
     const temp = array[i];
     array[i] = array[j];
     array[j] = temp;
+
+    drawSwap(array, i, j);
 }
 
 ///////////////////////////////////////////////////////////////////////
