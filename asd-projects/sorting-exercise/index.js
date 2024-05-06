@@ -14,7 +14,15 @@ The CSS ids you will work with are:
 ///////////////////////////////////////////////////////////////////////
 
 // TODO 2: Implement bubbleSort
+function bubbleSort(array) [ 
+    While (array[0] > array[array.length - 1]) {
+        sorted = true;
 
+        for (var i = 0; i < array.length - 2; i++) {
+
+        }
+    }
+]
 
 // TODO 3: Implement quickSort
 
@@ -23,7 +31,11 @@ The CSS ids you will work with are:
 
 
 // TODO 1: Implement swap
-
+function swap(array, i, j) {
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
 
 ///////////////////////////////////////////////////////////////////////
 /////////////////////// YOUR WORK GOES ABOVE HERE /////////////////////
